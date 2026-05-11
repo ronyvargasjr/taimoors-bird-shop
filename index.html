@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tai's Place — Birds, Fish &amp; Aquatic Goods</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER: Logo (centered) + Navigation (centered below logo)
+  ============================================================ -->
+  <header class="site-header">
+
+    <!-- Logo -->
+    <div class="logo">
+      <span class="logo-icon">🐠</span>
+      <h1>Tai's Place</h1>
+      <p class="tagline">Birds · Fish · Aquatic Goods</p>
+    </div>
+
+    <!-- Nav links: Birds | Fish | Aquatic Goods -->
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#birds"        class="nav-link">Birds</a></li>
+        <li><a href="#fish"         class="nav-link">Fish</a></li>
+        <li><a href="#aquatic-goods" class="nav-link">Aquatic Goods</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ============================================================
+       HERO BANNER — quick welcome section (generic website staple)
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Your Friendly Neighbourhood Pet Shop</h2>
+      <p>Discover hand-picked birds, fish, and everything you need to care for them.</p>
+      <a href="#featured" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main>
+
+    <!-- ---- FEATURED PRODUCTS CAROUSEL ---- -->
+    <section class="carousel-section" id="featured">
+      <h2 class="section-title">Featured Products</h2>
+
+      <div class="carousel-wrapper">
+
+        <!-- Previous arrow button -->
+        <button class="carousel-btn" id="prevBtn" aria-label="Previous product">&#8592;</button>
+
+        <!-- Viewport: clips the overflowing track -->
+        <div class="carousel-viewport">
+
+          <!-- Track: slides left/right via JS translateX -->
+          <div class="carousel-track" id="carouselTrack">
+
+            <!-- Product 1 — Birds -->
+            <article class="product-card" id="birds">
+              <div class="card-image birds-bg">🦜</div>
+              <div class="card-body">
+                <span class="badge badge-birds">Birds</span>
+                <h3>Blue &amp; Gold Macaw</h3>
+                <p>A brilliant, social companion with vivid plumage and a playful personality.</p>
+                <div class="card-footer">
+                  <span class="price">$499.00</span>
+                  <button class="btn-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 2 — Birds -->
+            <article class="product-card">
+              <div class="card-image birds-bg">🐦</div>
+              <div class="card-body">
+                <span class="badge badge-birds">Birds</span>
+                <h3>Yellow Canary</h3>
+                <p>A cheerful songbird with a beautiful voice, perfect for any home.</p>
+                <div class="card-footer">
+                  <span class="price">$89.00</span>
+                  <button class="btn-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 3 — Fish -->
+            <article class="product-card" id="fish">
+              <div class="card-image fish-bg">🐡</div>
+              <div class="card-body">
+                <span class="badge badge-fish">Fish</span>
+                <h3>Betta Fish</h3>
+                <p>A striking freshwater fish with flowing fins and bold colours.</p>
+                <div class="card-footer">
+                  <span class="price">$15.00</span>
+                  <button class="btn-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 4 — Fish -->
+            <article class="product-card">
+              <div class="card-image fish-bg">🐟</div>
+              <div class="card-body">
+                <span class="badge badge-fish">Fish</span>
+                <h3>Goldfish</h3>
+                <p>A classic, easy-care pet fish that's great for beginners of all ages.</p>
+                <div class="card-footer">
+                  <span class="price">$8.00</span>
+                  <button class="btn-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 5 — Aquatic Goods -->
+            <article class="product-card" id="aquatic-goods">
+              <div class="card-image aquatic-bg">🪸</div>
+              <div class="card-body">
+                <span class="badge badge-aquatic">Aquatic Goods</span>
+                <h3>Aquarium Starter Kit</h3>
+                <p>Tank, filter, air pump, and décor — everything you need in one box.</p>
+                <div class="card-footer">
+                  <span class="price">$129.00</span>
+                  <button class="btn-cart">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- end .carousel-track -->
+        </div><!-- end .carousel-viewport -->
+
+        <!-- Next arrow button -->
+        <button class="carousel-btn" id="nextBtn" aria-label="Next product">&#8594;</button>
+
+      </div><!-- end .carousel-wrapper -->
+
+      <!-- Dot indicators — built dynamically in script.js -->
+      <div class="carousel-dots" id="carouselDots" aria-label="Slide navigation"></div>
+
+    </section><!-- end #featured -->
+
+    <!-- ---- CONTACT SECTION ---- -->
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-subtitle">Questions about our animals or products? We're happy to help!</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <!-- Name + Email side by side on wider screens -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text"  id="name"  name="name"  placeholder="Your name"         required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com"   required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+
+          <!-- Success / error message (set by script.js) -->
+          <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+
+        </form>
+      </div>
+    </section><!-- end #contact -->
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <p class="footer-brand">🐠 Tai's Place</p>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#birds">Birds</a>
+        <a href="#fish">Fish</a>
+        <a href="#aquatic-goods">Aquatic Goods</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <p class="footer-copy">&copy; 2026 Tai's Place &mdash; All rights reserved.</p>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
