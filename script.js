@@ -137,6 +137,38 @@
 
 
 /* ============================================================
+   LOGO ICON CYCLING
+   — Rotates through a fish 🐠, bird 🦜, and reef 🪸 emoji
+     every 2.5 seconds with a smooth fade transition
+   ============================================================ */
+
+(function () {
+
+  const emojis  = ['🐠', '🦜', '🪸'];
+  let   index   = 0;
+
+  /* The logo icon element (present on every page) */
+  const icon = document.querySelector('.logo-icon');
+  if (!icon) return;  /* safety guard — exit if element not found */
+
+  setInterval(function () {
+
+    /* Step 1: fade out */
+    icon.classList.add('fade-out');
+
+    /* Step 2: swap emoji halfway through the fade, then fade back in */
+    setTimeout(function () {
+      index = (index + 1) % emojis.length;
+      icon.textContent = emojis[index];
+      icon.classList.remove('fade-out');
+    }, 300);  /* 300 ms matches the CSS transition duration */
+
+  }, 2500);   /* full cycle every 2.5 s */
+
+})();
+
+
+/* ============================================================
    "ADD TO CART" BUTTONS
    — Provides a brief visual confirmation when a card is clicked
    ============================================================ */
