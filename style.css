@@ -547,7 +547,7 @@ a.logo-link {
 
 /* Gradient variants per category */
 .birds-hero   { background: linear-gradient(135deg, #E67E22 0%, #A04000 100%); }
-.fish-hero    { background: linear-gradient(135deg, #1B6CA8 0%, #0D2E45 100%); }
+.fish-hero    { background: linear-gradient(135deg, #45cbdd 0%, #0d3845 100%); }
 .aquatic-hero { background: linear-gradient(135deg, #27AE60 0%, #1A6B3C 100%); }
 
 
@@ -586,7 +586,7 @@ a.logo-link {
    ============================================================ */
 
 /* Hero variant (neutral blue, same as fish hero) */
-.contact-hero { background: linear-gradient(135deg, #1B6CA8 0%, #0D2E45 100%); }
+.contact-hero { background: linear-gradient(135deg, #bc3fc0 0%, #3a0d45 100%); }
 
 .contact-page-section {
   max-width: 1100px;
