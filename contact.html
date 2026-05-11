@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Tai's Place</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER  (shared across all pages)
+  ============================================================ -->
+  <header class="site-header">
+
+    <!-- Logo — clicking returns to home page -->
+    <a href="index.html" class="logo-link">
+      <div class="logo">
+        <span class="logo-icon">🐠</span>
+        <h1>Tai's Place</h1>
+        <p class="tagline">Birds · Fish · Aquatic Goods</p>
+      </div>
+    </a>
+
+    <!-- Nav: aria-current="page" marks the active link -->
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html"         class="nav-link">Home</a></li>
+        <li><a href="birds.html"         class="nav-link">Birds</a></li>
+        <li><a href="fish.html"          class="nav-link">Fish</a></li>
+        <li><a href="aquatic-goods.html" class="nav-link">Aquatic Goods</a></li>
+        <li><a href="contact.html"       class="nav-link" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <section class="page-hero contact-hero">
+    <h2>📬 Contact Us</h2>
+    <p>Have a question about an animal or product? Drop us a message and we'll get back to you soon.</p>
+  </section>
+
+  <!-- ============================================================
+       CONTACT CONTENT  (form + store info side by side on desktop)
+  ============================================================ -->
+  <main>
+    <section class="contact-page-section">
+      <div class="contact-page-inner">
+
+        <!-- ---- Contact Form ---- -->
+        <div class="contact-form-col">
+          <h2 class="section-title" style="text-align:left;">Send a Message</h2>
+          <p class="contact-subtitle" style="text-align:left; margin-bottom:28px;">
+            Fill in the form below and we'll respond within one business day.
+          </p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+
+            <!-- Name + Email side by side on wider screens -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text"  id="name"  name="name"  placeholder="Your name"       required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+
+            <!-- Subject line -->
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="e.g. Question about Betta Fish" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+
+            <!-- Feedback message shown after submit (set by script.js) -->
+            <p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+
+          </form>
+        </div><!-- end .contact-form-col -->
+
+        <!-- ---- Store Info ---- -->
+        <aside class="contact-info-col">
+
+          <h3 class="info-heading">Store Information</h3>
+
+          <ul class="info-list">
+
+            <li class="info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>123 Pet Lane, Aquaville<br/>ON M1A 2B3, Canada</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+14161234567">(416) 123-4567</a></p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:hello@taisplace.com">hello@taisplace.com</a></p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <span class="info-icon">🕐</span>
+              <div>
+                <strong>Hours</strong>
+                <p>
+                  Mon – Fri: 9 am – 7 pm<br/>
+                  Saturday: 10 am – 6 pm<br/>
+                  Sunday: 11 am – 4 pm
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </aside><!-- end .contact-info-col -->
+
+      </div><!-- end .contact-page-inner -->
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER  (shared across all pages)
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">🐠 Tai's Place</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="birds.html">Birds</a>
+        <a href="fish.html">Fish</a>
+        <a href="aquatic-goods.html">Aquatic Goods</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Tai's Place &mdash; All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
