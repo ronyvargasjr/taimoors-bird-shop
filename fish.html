@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fish | Tai's Place</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER  (shared across all pages)
+  ============================================================ -->
+  <header class="site-header">
+
+    <!-- Logo — clicking returns to home page -->
+    <a href="index.html" class="logo-link">
+      <div class="logo">
+        <span class="logo-icon">🐠</span>
+        <h1>Tai's Place</h1>
+        <p class="tagline">Birds · Fish · Aquatic Goods</p>
+      </div>
+    </a>
+
+    <!-- Nav: aria-current="page" marks the active link -->
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="birds.html"         class="nav-link">Birds</a></li>
+        <li><a href="fish.html"          class="nav-link" aria-current="page">Fish</a></li>
+        <li><a href="aquatic-goods.html" class="nav-link">Aquatic Goods</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ============================================================
+       PAGE HERO  (blue / ocean theme for fish)
+  ============================================================ -->
+  <section class="page-hero fish-hero">
+    <h2>🐠 Fish</h2>
+    <p>Vibrant freshwater and saltwater fish — healthy, tank-ready, and sourced responsibly.</p>
+  </section>
+
+  <!-- ============================================================
+       PRODUCTS GRID  (3 × 2 = 6 fish)
+  ============================================================ -->
+  <main>
+    <section class="products-section">
+      <h2 class="section-title">All Fish</h2>
+
+      <div class="products-grid">
+
+        <!-- Card 1 -->
+        <article class="product-card">
+          <div class="card-image fish-bg">🐡</div>
+          <div class="card-body">
+            <span class="badge badge-fish">Fish</span>
+            <h3>Betta Fish</h3>
+            <p>A striking freshwater fish with flowing fins and bold colours — perfect solo or in a community.</p>
+            <div class="card-footer">
+              <span class="price">$15.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <div class="card-image fish-bg">🐟</div>
+          <div class="card-body">
+            <span class="badge badge-fish">Fish</span>
+            <h3>Goldfish</h3>
+            <p>A classic, easy-care pet fish that's great for beginners and kids of all ages.</p>
+            <div class="card-footer">
+              <span class="price">$8.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <div class="card-image fish-bg">🐠</div>
+          <div class="card-body">
+            <span class="badge badge-fish">Fish</span>
+            <h3>Clownfish</h3>
+            <p>The cheerful reef fish everyone loves — bold orange and white stripes, hardy and lively.</p>
+            <div class="card-footer">
+              <span class="price">$22.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card">
+          <div class="card-image fish-bg">🐟</div>
+          <div class="card-body">
+            <span class="badge badge-fish">Fish</span>
+            <h3>Guppy <span style="font-weight:400;font-size:.9em;">(5-pack)</span></h3>
+            <p>Colourful, low-maintenance community fish that breed easily and add life to any tank.</p>
+            <div class="card-footer">
+              <span class="price">$12.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card">
+          <div class="card-image fish-bg">🐡</div>
+          <div class="card-body">
+            <span class="badge badge-fish">Fish</span>
+            <h3>Angelfish</h3>
+            <p>Elegant triangular shape with flowing fins — a graceful centrepiece for any freshwater tank.</p>
+            <div class="card-footer">
+              <span class="price">$18.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="product-card">
+          <div class="card-image fish-bg">🐠</div>
+          <div class="card-body">
+            <span class="badge badge-fish">Fish</span>
+            <h3>Neon Tetra <span style="font-weight:400;font-size:.9em;">(10-pack)</span></h3>
+            <p>Tiny, vibrant fish with a striking blue and red stripe — stunning when they school together.</p>
+            <div class="card-footer">
+              <span class="price">$14.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- end .products-grid -->
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER  (shared across all pages)
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">🐠 Tai's Place</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="birds.html">Birds</a>
+        <a href="fish.html">Fish</a>
+        <a href="aquatic-goods.html">Aquatic Goods</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Tai's Place &mdash; All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

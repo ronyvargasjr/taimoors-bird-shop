@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birds | Tai's Place</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER  (shared across all pages)
+  ============================================================ -->
+  <header class="site-header">
+
+    <!-- Logo — clicking returns to home page -->
+    <a href="index.html" class="logo-link">
+      <div class="logo">
+        <span class="logo-icon">🐠</span>
+        <h1>Tai's Place</h1>
+        <p class="tagline">Birds · Fish · Aquatic Goods</p>
+      </div>
+    </a>
+
+    <!-- Nav: aria-current="page" marks the active link -->
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="birds.html"         class="nav-link" aria-current="page">Birds</a></li>
+        <li><a href="fish.html"          class="nav-link">Fish</a></li>
+        <li><a href="aquatic-goods.html" class="nav-link">Aquatic Goods</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ============================================================
+       PAGE HERO  (orange / warm theme for birds)
+  ============================================================ -->
+  <section class="page-hero birds-hero">
+    <h2>🦜 Birds</h2>
+    <p>Hand-raised, healthy birds ready to join your family — from vivid parrots to cheerful songbirds.</p>
+  </section>
+
+  <!-- ============================================================
+       PRODUCTS GRID  (3 × 2 = 6 birds)
+  ============================================================ -->
+  <main>
+    <section class="products-section">
+      <h2 class="section-title">All Birds</h2>
+
+      <div class="products-grid">
+
+        <!-- Card 1 -->
+        <article class="product-card">
+          <div class="card-image birds-bg">🦜</div>
+          <div class="card-body">
+            <span class="badge badge-birds">Birds</span>
+            <h3>Blue &amp; Gold Macaw</h3>
+            <p>A brilliant, social companion with vivid plumage and a playful, affectionate personality.</p>
+            <div class="card-footer">
+              <span class="price">$499.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <div class="card-image birds-bg">🐦</div>
+          <div class="card-body">
+            <span class="badge badge-birds">Birds</span>
+            <h3>Yellow Canary</h3>
+            <p>A cheerful songbird with a beautiful voice, perfect for any living space.</p>
+            <div class="card-footer">
+              <span class="price">$89.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <div class="card-image birds-bg">🦅</div>
+          <div class="card-body">
+            <span class="badge badge-birds">Birds</span>
+            <h3>African Grey Parrot</h3>
+            <p>One of the most intelligent birds — remarkable talkers with a calm, curious nature.</p>
+            <div class="card-footer">
+              <span class="price">$799.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card">
+          <div class="card-image birds-bg">🐤</div>
+          <div class="card-body">
+            <span class="badge badge-birds">Birds</span>
+            <h3>Budgerigar (Budgie)</h3>
+            <p>The world's most popular pet bird — friendly, fun, and easy to care for.</p>
+            <div class="card-footer">
+              <span class="price">$45.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card">
+          <div class="card-image birds-bg">🦜</div>
+          <div class="card-body">
+            <span class="badge badge-birds">Birds</span>
+            <h3>Cockatiel</h3>
+            <p>Affectionate and easy to tame — cockatiels are great companions for all ages.</p>
+            <div class="card-footer">
+              <span class="price">$120.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="product-card">
+          <div class="card-image birds-bg">🕊️</div>
+          <div class="card-body">
+            <span class="badge badge-birds">Birds</span>
+            <h3>Lovebirds (Pair)</h3>
+            <p>Bonded pairs known for their playful, affectionate, and entertaining personalities.</p>
+            <div class="card-footer">
+              <span class="price">$180.00</span>
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- end .products-grid -->
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER  (shared across all pages)
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">🐠 Tai's Place</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="birds.html">Birds</a>
+        <a href="fish.html">Fish</a>
+        <a href="aquatic-goods.html">Aquatic Goods</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Tai's Place &mdash; All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
