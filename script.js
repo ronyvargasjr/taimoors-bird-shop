@@ -1,4 +1,35 @@
 /* ============================================================
+   HAMBURGER / SANDWICH NAVIGATION
+   — Toggles .nav-open on <header> when the button is clicked
+   — Closes the menu automatically when any nav link is tapped
+   ============================================================ */
+
+(function () {
+
+  const header   = document.querySelector('.site-header');
+  const toggle   = document.getElementById('navToggle');
+  const navLinks = document.querySelectorAll('.main-nav .nav-link');
+
+  if (!toggle) return;  /* safety guard — no hamburger on this page */
+
+  /* Open / close on button click */
+  toggle.addEventListener('click', function () {
+    const isOpen = header.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  /* Close when any nav link is tapped (good UX on mobile) */
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      header.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+})();
+
+
+/* ============================================================
    CAROUSEL
    — Shows 3 cards (desktop), 2 (tablet ≤900px), 1 (mobile ≤580px)
    — Prev / next buttons slide the track; dots jump to any position
