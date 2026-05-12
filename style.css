@@ -118,6 +118,102 @@ a.logo-link {
 
 
 /* ============================================================
+   HAMBURGER / SANDWICH NAVIGATION
+   — Button hidden on desktop; shown on mobile (≤ 768 px)
+   — JS toggles .nav-open on <header> to slide the menu open
+   ============================================================ */
+
+/* Three-bar icon button (hidden by default) */
+.nav-toggle {
+  display: none;              /* shown only inside the mobile media query */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+/* Individual bars */
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+  transform-origin: center;
+}
+
+/* Animate bars → X when .nav-open is present on the header */
+.site-header.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+.site-header.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.site-header.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* ---- Mobile layout (≤ 768 px) ---- */
+@media (max-width: 768px) {
+
+  /* Header becomes a flex row: logo left, hamburger right */
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;          /* nav drops onto its own row below */
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;       /* tighter vertical padding */
+    text-align: left;
+
+    /* Sticky on mobile so the hamburger is always reachable */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  /* Compact logo — keep it short on small screens */
+  .logo        { margin-bottom: 0; text-align: left; }
+  .logo h1     { font-size: 1.6rem; }
+  .tagline     { display: none; }            /* hide tagline to save space */
+  .logo-icon   { display: inline; font-size: 1.9rem; margin-right: 6px; }
+
+  /* Show the hamburger button */
+  .nav-toggle  { display: flex; }
+
+  /* Nav occupies full width below the logo row, collapsed by default */
+  .main-nav {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;            /* collapsed */
+    transition: max-height .35s ease;
+  }
+
+  /* Slide open when .nav-open is toggled on the header */
+  .site-header.nav-open .main-nav { max-height: 400px; }
+
+  /* Stack links vertically, full width */
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    background: rgba(255, 255, 255, .07);
+  }
+
+  .nav-link {
+    padding: 14px 20px;
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+  }
+}
+
+
+/* ============================================================
    HERO BANNER
    ============================================================ */
 .hero {
